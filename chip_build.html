@@ -21,7 +21,7 @@ gcc version 4.9.2 20140904 (prerelease) (crosstool-NG linaro-1.13.1-4.9-2014.09 
 
 <p>C.H.I.P should now boot to u-boot. Connect to C.H.I.P serial port use minicom (serial port setup: 1152008n1)</p>
 
-<p>At at u-boot command line, use following commands to flash SPL to NAND:</p>
+<p>At u-boot command line, use following commands to flash SPL to NAND:</p>
 
 <pre><code>nand erase.chip     &lt;== Only erase from 0x000000 to 0x400000 if other parttions need to be reserved.
 nand write.raw.noverify 0x430000000 0x0 0xc4

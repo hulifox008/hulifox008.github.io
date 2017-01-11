@@ -22,7 +22,7 @@ FEL boot target:
 
 C.H.I.P should now boot to u-boot. Connect to C.H.I.P serial port use minicom (serial port setup: 1152008n1)
 
-At at u-boot command line, use following commands to flash SPL to NAND:
+At u-boot command line, use following commands to flash SPL to NAND:
 
     nand erase.chip     <== Only erase from 0x000000 to 0x400000 if other parttions need to be reserved.
     nand write.raw.noverify 0x430000000 0x0 0xc4
