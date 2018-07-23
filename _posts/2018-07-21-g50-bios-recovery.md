@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Recover BIOS of a bricked Lenovo G50-70"
+date:  2018-07-21 16:00:00 -0600
+---
+## Recover BIOS of a bricked Lenovo G50-70
+
 I cannot remember what exactly happened to this laptop. It just went black screen when upgrading Windows 8, and never came back. Now, every time I turn on the power, the power LED will light up, but the screen will not turn on. You can notice the screen is flashing, even though there's no back light.
 
 After some researching online, it seems like there's an emergency bios recovery mode, by pressing and holding down the Fn+R key, then turn on the power. I was able to get a copy of the recovery bios, named aclu1x64.fd, put it on a thumb drive, plug it into a USB port. I'm pretty sure the emergency mode is activated, since I can see the screen is not flashing, and thumb drive flashes a little bit after powering on. The thumb drive will stop flashing for a while and start flashing again. I though that's the system reading the thumb drive. But the system will suddenly reboot just after the thumb drive started flashing. You can tell that by noticing the screen starts flashing again...Well, maybe the bios is damaged so bad, that the emergency mode cannot work. Or, maybe it's not the bios at all. Anyway, I decided to reflash the BIOS using a external programmer.
