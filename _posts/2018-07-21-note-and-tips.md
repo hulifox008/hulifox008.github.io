@@ -33,7 +33,7 @@ ssh 192.168.1.80 'ffmpeg -f v4l2 -video_size 800x600  -r 10 -i /dev/video1   -vc
 
 Following command uses ffmpeg to capture rtsp stream from Sannce H960 DVR. "channel" is the camera number, stream=0.sdp or 1.sdp to select main stream or sub stream.
 ```
-ffmpeg -i 'rtsp://192.168.2.10:554/user=admin&password=&channel=4&stream=0.sdp?real_stream--rtp-caching=100' -r 25 -codec copy output.mp4}}}[[BR]]
+ffmpeg -i 'rtsp://192.168.2.10:554/user=admin&password=&channel=4&stream=0.sdp?real_stream--rtp-caching=100' -r 25 -codec copy output.mp4
 ```
 
 Streaming using ssh tunnel:
