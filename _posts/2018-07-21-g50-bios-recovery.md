@@ -11,10 +11,10 @@ After some researching online, it seems like there's an emergency bios recovery 
 
 First, remove the back cover and keyboard. There are some flat cables between the keyboard and main board. They are very difficult to remove and put back, since the space between the keyboard and main board are pretty tight. I don't know what method the used at manufacturing, but it did take me a lot of time to remove and put them back. After the main board is removed. You can locate the BIOS chip pretty easily. It's the only SOIC8 package on the board and is label "U3". This is an 8MB SPI flash rom. Instead of de-soldering the chip from the board, I ordered a SOIC8 clip from Amazon. The I used a FT2232H based breakout board as the USB-SPI adapter. The programming software is [flashrom](https://github.com/flashrom/flashrom). The whole setup looks like:
 
-![recovery_image1]({{site.url}}/assets/bios_recovery_1.jpg)
+![recovery_image1](https://github.com/hulifox008/wiki/blob/master/assets/bios_recovery_1.jpg)
 
 The green board is a FT2232H breakout board. And this is how the clip attached to the chip:
 
-![recovery_image2]({{site.url}}/assets/bios_recovery_2.jpg)
+![recovery_image2](https://github.com/hulifox008/wiki/blob/master/assets/bios_recovery_2.jpg)
 
 After every thing is connected. I was able to run flashrom, and it detected the chip without problem. Then I read out the whole chip and save it to a file. I then load the file to UEFItool, and immediately found out there's a section had checksum error and failed to decompress. I managed to extract the 8MB bios image from the latest BIOS upgrade package, downloaded from Lenovo website. And also open it with UEFItool. I then only replace the damaged section in the backup BIOS, with the corresponding section extracted from the latest bios. After writing the fixed BIOS back to the SPI rom, I connected the power and LCD screen. The LCD lighted up after turning power on!! Put everything back, the laptop is working again!
